@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Forecaster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <header class="has-text-centered is-size-2">
+        <h1 class="title">Event Forecaster</h1>
+    </header>
+    <section class="header section columns" id="override-header">
+        <section class="header-content logo box column is-one-quarter">
+                <h2 class="pin-header">Current City:</h2>
+                <p class="pin-header current-view has-text-centered"></p><br>
+            <div class="select is-focused is-hovered">
+                <select class="select-options">
+                    <option>Select a Pin</option>
+                </select>
+            </div>
+        </section>
+        <section class="header-content search-field box column">
+            <div>
+                <div class="field">
+                    <label class="label">City</label>
+                    <div class="control">
+                        <input class="input" type="name" placeholder="City Name...">
+                    </div>
+                </div>
+                <button class="button search-button is-warning is-rounded is-focused">Search</button>
+                <button class="button pin-button is-danger is-rounded is-focused">Pin City</button>
+            </div>
+        </section>
+    </section>
+
+    <main class="main-body section columns" id="main-body">
+        <div class="column numbers" id="main-box">
+            <h2 class="has-text-centered">Events List</h2>
+            <section class="main-content events box">
+                <ul class="events-list" id="events-list" data-current-page="1">
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="box list-item" id="list-item">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </li>
+                </ul>
+
+            </section>
+            <nav class="pagination-container">
+                <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+                    &lt;
+                </button>
+
+                <div id="pagination-numbers">
+
+                </div>
+
+                <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+                    &gt;
+                </button>
+            </nav>
+        </div>
+        <!-- START OF FORECAST SECTION -->
+        <div class="column is-one-quarter">
+            <h2 class="has-text-centered">General Forecast</h2>
+            <section class="main-content forecast box is-flex-grow-6 is-justify-content-center">
+                <ul>
+                    <li class="box p-4 forecast-img" id="forecast-top">
+                        <h2 id="forecast-status"></h2>
+                        <img id="forecast-icon">
+                    </li>
+                    <li class="box p-8 forecast-img">
+                        <p class="weather-display-name" id="forecast-temp" style="display:none">Temperature:</p>
+                        <h2 id="forecast-temp-input"></h2>
+                        <p class="weather-display-name" id="forecast-humidity" style="display:none">Humidity:</p>
+                        <h2 id="forecast-humidity-input"></h2>
+                        <p class="weather-display-name" id="forecast-wind" style="display:none">Wind Speed:</p>
+                        <h2 id="forecast-wind-input"></h2>
+                        <p class="weather-display-name" id="forecast-date" style="display:none">Currently Showing:</p>
+                        <h2 id="forecast-date-input"></h2>
+                    </li>
+                </ul>
+        </div>
+        </section>
+        </div>
+    </main>
+
+    <footer class="footer" id="override-footer">
+        <div class="content has-text-centered">
+            <p>
+                &#169 Team Car RamRod 2023 &#128663;
+            </p>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
